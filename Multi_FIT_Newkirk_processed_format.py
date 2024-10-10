@@ -66,20 +66,7 @@ def normalize(arr):
     '''Normalize array to have values in range [0,255] for creating image.'''
     y = (arr - np.min(arr)) / (np.max(arr) - np.min(arr)) * 255
     return y
-# def remove_vertlines(data, threshold_low, threshold_high):
-#     """Remove spikes in the data by identifying and excluding time indices with spikes."""
-#     # denoised_data = []
-#     # median_values = np.median(data, axis=0)
-#     # spike_indices = np.where(median_values > threshold)[0]
-#     # for index in spike_indices:
-#     #     data[:, index] = np.median(data[:,0:10], axis=1)
-#     standardized = normalize(standardize_rows( data )).astype(np.uint8)
-#     median_values = np.median(data[:, :10], axis=1)     # Median value of the first 10 time columns, considered as background
-#     # Create a mask where data exceeds the upper threshold or is below the lower threshold. THIS IS GOOD AT REMOVING VERTICAL LINES, BUT IT ALSO ENLARGES OTHER NOISES
-#     mask = (data > threshold_high) | (data < threshold_low)
-#     # Replace values where the mask is True with the median values
-#     denoised_data = np.where(mask, median_values[:, np.newaxis], data)
-#     return denoised_data
+
 
 def remove_vertlines(data, threshold_low, threshold_high):
     """Remove spikes in the data by identifying and excluding time indices with spikes."""
