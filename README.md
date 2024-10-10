@@ -16,3 +16,7 @@ Part III. Type II SRBs and CMEs analysis
 -CME_chars_calculation.m
 Refer to this paper for the equations used:
 ANGEO - Low-frequency solar radio type II bursts and their association with space weather events during the ascending phase of solar cycle 25 (copernicus.org)
+
+Part IV. TEC analysis
+Use this code to plot the TEC data in the ionosphere. TEC data is obtained from GNSS satellites. 
+-IONEX_overplot.py
